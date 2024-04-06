@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  gap: 5px;
+}
+
+.header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.logo {
+  height: 20px;
+}
+
+.timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+input {
+  border: 1px solid #e2e2e2;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 5px;
+}
+
+textarea {
+  border: 1px solid #e2e2e2;
+  resize: none;
+
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 90px;
+  padding: 5px;
+}
+
+button {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #0056b3;
+
+}
+
+.pfp {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.messageHeader h3 {
+  margin: 0;
+}
+
+.textButton {
+  margin: 0;
+  color: #0070f3;
+}
+
+.textButton:hover {
+  cursor: pointer;
+  color: #0056b3;
+  text-decoration: underline;
+}
