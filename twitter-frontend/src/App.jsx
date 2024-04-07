@@ -7,17 +7,13 @@ import './App.css'
 function App() {
 
   const [yourName, setYourName] = useState("");
-  const [yourPFP, setYourPFP] = useState("");
   const [content, setContent] = useState("");
-  const [contentImage, setContentImage] = useState("");
 
   const [tweets, setTweets] = useState([]);
 
   const handleResetInputs = () => {
     setYourName("");
-    setYourPFP("");
     setContent("");
-    setContentImage("");
   }
 
   const handleLoadTweets = async () => {
@@ -31,9 +27,7 @@ function App() {
       method: "POST",
       body: JSON.stringify({
         sender: yourName,
-        senderPFP: yourPFP,
-        content,
-        imageUrl: contentImage
+        content
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
@@ -79,23 +73,11 @@ function App() {
             value={yourName}
             onChange={(e) => setYourName(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="Your Profile Picture URL (Optional)"
-            value={yourPFP}
-            onChange={(e) => setYourPFP(e.target.value)}
-          />
           <textarea
             type="text"
             placeholder="Content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Content Image (Optional)"
-            value={contentImage}
-            onChange={(e) => setContentImage(e.target.value)}
           />
           <button
             onClick={handleAddTweet}
@@ -108,9 +90,7 @@ function App() {
           <Tweet
             _id={tweet._id}
             sender={tweet.sender}
-            senderPFP={tweet.senderPFP}
             content={tweet.content}
-            imageUrl={tweet.imageUrl}
             key={index}
             handleDeleteTweet={handleDeleteTweet}
             handleReload={handleLoadTweets}
